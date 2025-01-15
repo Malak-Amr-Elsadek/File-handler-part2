@@ -1,12 +1,9 @@
-file = open('Codingal.txt')
-print(file.read())
-file.close()
+file = open('Codingal.txt','r')
+count=0
 
-
-file_w = open('Codingal.txt','w')
-file_w.write("I love Miss Jemima!!!")
-file.close()
-
-file_a=open('Codingal.txt','a')
-file_w.write("Codingal Penguin")
-file.close()
+content=file.read()
+list=content.split("\n")
+for line in list:
+    if line:
+        count=count+1
+print("Toltal line count:",count)
